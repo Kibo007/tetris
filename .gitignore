@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.d.ts
+.vscode/
+npm-debug.log
+.DS_Store
+.idea
+.happypack/
+*.sublime-*
+.project
+

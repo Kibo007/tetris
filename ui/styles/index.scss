@@ -1,0 +1,176 @@
+@import "./fonts.scss";
+@import "./normalize.scss";
+
+$small-text: 12px;
+$mid-text: 14px;
+$normal-text: 16px;
+$big-text: 20px;
+$extra-big: 24px;
+
+/* Shared generic css
+ ------------------------------ ------------------------------ ------------------------------ ------------------------------
+ ------------------------------ ------------------------------ ------------------------------ ------------------------------
+ ------------------------------ ------------------------------ ------------------------------ ------------------------------
+*/
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  font-size: $normal-text;
+  text-decoration: none;
+}
+
+:global {
+
+  .mr-m {
+    margin-right: 20px;
+  }
+  .mb-m {
+    margin-bottom: 20px;
+  }
+
+  .ml-s {
+    margin-left: 10px;
+  }
+
+  .ml-l {
+    margin-left: 40px;
+  }
+  .mt-l {
+    margin-top: 40px;
+  }
+
+  .center-text {
+    text-align: center;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  /* generic title and content */
+  .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  svg path{
+    transition: fill .2s linear;
+  }
+
+  .center-vertical {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+/* Layout
+ ------------------------------ ------------------------------ ------------------------------ ------------------------------
+ ------------------------------ ------------------------------ ------------------------------ ------------------------------
+ ------------------------------ ------------------------------ ------------------------------ ------------------------------
+*/
+
+[data-layout] {
+  box-sizing: border-box;
+  display: flex!important;
+}
+
+[data-layout=column] {
+  flex-direction: column;
+}
+
+[data-layout=row] {
+  flex-direction: row;
+}
+
+[data-layout=row-reverse] {
+  flex-direction: row-reverse;
+}
+
+[data-flex] {
+  box-sizing: border-box;
+  flex: 1!important;
+}
+
+[data-flex-2] {
+  box-sizing: border-box;
+  flex: 2!important;
+}
+
+[data-flex-4] {
+  box-sizing: border-box;
+  flex: 4!important;
+}
+
+/* Alignment attributes for layout containers' children
+// Arrange on the Main Axis
+// center, start, end, space-between, space-around
+// flex-start is the default for justify-content
+------------------------------
+*/
+
+/* Main Axis Center */
+[data-layout-align="center"],
+
+/* stretch */
+[data-layout-align^="center "] {
+  justify-content: center;
+}
+
+/* Main Axis End */
+[data-layout-align="end"],
+
+/* stretch */
+[data-layout-align^="end "] {
+  justify-content: flex-end;
+}
+
+/* Main Axis Space Around */
+[data-layout-align="space-around"],
+
+/* stretch */
+[data-layout-align^="space-around "] {
+  justify-content: space-around;
+}
+
+/* Main Axis Space Between */
+[data-layout-align="space-between"],
+
+/* stretch */
+[data-layout-align^="space-between "] {
+  justify-content: space-between;
+}
+
+
+/* Arrange on the Cross Axis
+// center, start, end
+// stretch is the default for align-items
+// ------------------------------
+*/
+
+/* Cross Axis Center */
+[data-layout-align$=" center"] {
+  align-items: center;
+}
+
+/* Cross Axis Start */
+[data-layout-align$=" start"] {
+  align-items: flex-start;
+}
+
+/* Cross Axis End */
+[data-layout-align$=" end"] {
+  align-items: flex-end;
+}
+
+[data-layout-wrap]{
+  flex-wrap: wrap;
+}
