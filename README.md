@@ -1,4 +1,4 @@
-#Toptal Tetris Game
+#Tetris Game done with react and redux
 
 ### Install and Run the Dev Server (Linux/OSX)
 
